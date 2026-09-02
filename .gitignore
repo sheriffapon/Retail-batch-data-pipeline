@@ -10,7 +10,7 @@ airflow/airflow.db/
 dbt/target/
 dbt/logs/
 dbt/dbt_packages/
-
+dbt/profiles/.user.yml
 # PostgreSQL data
 postgres/data/
 
