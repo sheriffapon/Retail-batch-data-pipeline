@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: fct_transactions
+    description: "Transaction-level fact table."
+
+    columns:
+      - name: invoice_no
+        data_tests:
+          - not_null
+
+      - name: stock_code
+        data_tests:
+          - not_null
+
+      - name: transaction_type
+        data_tests:
+          - not_null
+
+  - name: customer_summary
+    description: "Customer-level transaction summary."
+
+    columns:
+      - name: customer_id
+        data_tests:
+          - not_null
+          - unique
+
+  - name: daily_sales
+    description: "Daily sales and transaction metrics."
+
+    columns:
+      - name: sales_date
+        data_tests:
+          - not_null
+          - unique

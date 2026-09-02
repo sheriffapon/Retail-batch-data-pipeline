@@ -1,0 +1,29 @@
+.env
+__pycache__/
+*.pyc
+airflow/logs/
+# Airflow
+airflow/logs/
+airflow/airflow.db/
+
+# dbt generated files
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+
+# PostgreSQL data
+postgres/data/
+
+# Database backups
+backups/
+
+# Python environments
+.venv/
+venv/
+
+# OS / editor files
+.DS_Store
+.vscode/
+
+# Data files
+data/

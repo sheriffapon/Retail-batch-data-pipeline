@@ -1,0 +1,13 @@
+batch_data_pipeline:
+  target: dev
+
+  outputs:
+    dev:
+      type: postgres
+      host: batch-postgres
+      port: 5432
+      user: batch_user
+      password: "{{ env_var('POSTGRES_PASSWORD') }}"
+      dbname: batch_db
+      schema: public
+      threads: 2

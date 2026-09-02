@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: stg_transactions
+    description: "Cleaned and standardized transaction data."
+
+    columns:
+      - name: invoice_no
+        description: "Invoice number."
+        data_tests:
+          - not_null
+
+      - name: stock_code
+        description: "Product stock code."
+        data_tests:
+          - not_null
+
+      - name: quantity
+        description: "Number of units in the transaction."
+        data_tests:
+          - not_null
+
+      - name: invoice_date
+        description: "Date and time of the transaction."
+        data_tests:
+          - not_null
+
+      - name: unit_price
+        description: "Price per unit."
+        data_tests:
+          - not_null
+
+      - name: transaction_type
+        description: "Whether the transaction is a sale or return."
+        data_tests:
+          - not_null
+
+      - name: transaction_amount
+        description: "Quantity multiplied by unit price."
+        data_tests:
+          - not_null
